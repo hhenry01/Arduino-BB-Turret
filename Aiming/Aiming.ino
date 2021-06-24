@@ -5,6 +5,10 @@
 #define SERVO_Y 6
 #define DEFAULT_ANGLE 90
 #define INPUT_RANGE 1023
+#define X_MAX 180
+#define X_MIN 0
+#define Y_MAX 140
+#define Y_MIN 40
 
 static const int input_mapping[] = {-3, -2, -1, 0, 1, 2, 3};
 static int inputMapSize;
@@ -40,10 +44,11 @@ void loop() {
   yVal = input_mapping[yVal];
   x_angle += xVal;
   y_angle += yVal;
-  if (x_angle > 180) x_angle = 180;
-  if (x_angle < 0) x_angle = 0;
-  if (y_angle > 180) y_angle = 180;
-  if (y_angle < 0) y_angle = 0;
+  if (x_angle > X_MAX) x_angle = X_MAX;
+  if (x_angle < X_MIN) x_angle = X_MIN;
+  if (y_angle > Y_MAX) y_angle = Y_MAX;
+  if (y_angle < Y_MIN) y_angle = Y_MIN;
   servoX.write(x_angle);
   servoY.write(y_angle);
+  delay(10);
 }
