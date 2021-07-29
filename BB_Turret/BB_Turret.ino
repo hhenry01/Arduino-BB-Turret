@@ -1,5 +1,7 @@
 #include <Servo.h>
-#define MOTOR_PIN 3
+#define MOTOR_ENABLE 10
+#define MOTOR_CONTROL_1 11
+#define MOTOR_CONTROL_2 12
 #define BUTTON 2
 #define JOY_X A7
 #define JOY_Y A6
@@ -22,7 +24,7 @@ Servo servoY;
 
 void setup() {
   Serial.begin(9600);
-  pinMode(MOTOR_PIN, OUTPUT);
+  pinMode(MOTOR_ENABLE, OUTPUT);
   pinMode(BUTTON, INPUT);
   servoX.attach(SERVO_X);
   servoY.attach(SERVO_Y);
@@ -38,10 +40,15 @@ void setup() {
 }
 
 void loop() {
-  if (digitalRead(BUTTON) == HIGH)
-   analogWrite(MOTOR_PIN, 255);
-  else
-   analogWrite(MOTOR_PIN, 0);
+  if (digitalRead(BUTTON) == HIGH) {
+   analogWrite(MOTOR_ENABLE, 255);
+   digitalWrite(MOTOR_CONTROL_1, HIGH);
+   digitalWrite(MOTOR_CONTROL_2, LOW);
+  } else {
+   analogWrite(MOTOR_ENABLE, 0);
+   digitalWrite(MOTOR_CONTROL_1, LOW);
+   digitalWrite(MOTOR_CONTROL_2, LOW);
+  }
   int xVal = analogRead(JOY_X);
   int yVal = analogRead(JOY_Y);
   xVal *= inputMapModifier;
