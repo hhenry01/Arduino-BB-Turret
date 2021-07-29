@@ -12,7 +12,7 @@
 #define X_MAX 180
 #define X_MIN 0
 #define Y_MAX 140
-#define Y_MIN 40
+#define Y_MIN 60
 
 static const int input_mapping[] = {-3, -2, -1, 0, 1, 2, 3};
 static int inputMapSize;
