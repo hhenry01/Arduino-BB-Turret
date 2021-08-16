@@ -2,14 +2,15 @@
 ## About
 The BB Turret is a project developed for [Zen Maker Lab](https://www.zenmakerlab.com/).
 
-The code found under [BB_Turret](https://github.com/hhenry01/Arduino-BB-Turret/blob/main/BB_Turret/BB_Turret.ino) controls the shooting and aiming functions of the turret. The two other folders separate the shooting and aiming funciontalities.
+The code found under [BB_Turret](https://github.com/hhenry01/Arduino-BB-Turret/blob/main/BB_Turret/BB_Turret.ino) controls the shooting and aiming functions of the turret.
 
 ## How it Works
 Full details surrounding the project belong to Zen Maker Lab. This README only describes the code and the circuit.
 ### Shooting
-![Motor Circuit](Images/Motor.png "Motor Circuit")
 
-When a button is pressed, the Arduino outputs a voltage to the transistor's base. With a resistor, this creates a current which supplies the motor. The diode is to prevent damage to the motor. The motor pulls a launcher using a gear, like a rack and pinion. The gear does not have teeth along its entire circumference, and so automatically releases the launcher forward. When it is released it hits a BB shooting it.
+When a button is pressed, the Arduino outputs two voltages to the L298N module in order to spin a motor. One of the input pins is set to *HIGH* while the other is set to *LOW*. For more information, see an [L298N schematic](https://www.handsontec.com/dataspecs/L298N%20Motor%20Driver.pdf).
+\
+The motor spins a gear in a rack and pinion system. The gear pushes the rack against a spring. The gear does not have teeth around its entire circumference, so the rack is eventually released and is propelled forward by a spring, hitting and shooting a projectile.
 
 ### Aiming
 ![Aiming Circuit](Images/Aiming.png "Aiming Circuit")
