@@ -1,4 +1,5 @@
 #include <Servo.h>
+#define FIRE_SPEED 112 // Adjust this value to determine shooting speed.
 #define MOTOR_ENABLE 6
 #define MOTOR_CONTROL_1 11
 #define MOTOR_CONTROL_2 12
@@ -36,7 +37,7 @@ void setup() {
 
 void loop() {
   if (digitalRead(BUTTON) == HIGH) {
-   analogWrite(MOTOR_ENABLE, 128);
+   analogWrite(MOTOR_ENABLE, FIRE_SPEED); // 
    digitalWrite(MOTOR_CONTROL_1, HIGH);
    digitalWrite(MOTOR_CONTROL_2, LOW);
   } else {

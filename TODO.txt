@@ -1,0 +1,21 @@
+- Update images and circuit/PCB to reflect changes in code
+
+- Circuit still requires the Arduino's USB to be plugged in for some reason.
+
+- Fire rate too fast
+BB can't fall down and sit properly in chamber before launcher released. Suboptimal impact results in drastic velocity decrease. 
+Single shots with careful manual presses have much more velocity and distance.
+
+Potential solution: When a button press is detected, run the motor for a certain amount of time (enough to pull it back all the way), 
+then pause to let the BB drop into place. After the delay, release. Need to restrict aiming downwards.
+
+- Double feed issue with funnel loader
+The BB above the current one in the chamber will press against the lower one, pushing it out of its optimal position (especially if operating slower). 
+Additionally, by pushing it out of the way it makes space for itself, resulting in a double feed and drastically reduced velocity.
+
+Potential solutions:
+Complex - Mechanically operate a blocker to prevent the next BB coming in.
+Complex - Use a spring operated loading system and control loading that way. Needs a lot more components.
+Simpler - Keep the chambered BB in a set position with blockers that will only let the angled tip of the launcher through.
+Can do this with portrusions on the interior of the chamber, but will need to shorten (or sharpen the angle of) the launcher.
+Also requires slight tilt back or no tilt.
