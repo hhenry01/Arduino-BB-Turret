@@ -8,7 +8,7 @@ The code found under [BB_Turret](https://github.com/hhenry01/Arduino-BB-Turret/b
 Full details surrounding the project belong to Zen Maker Lab. This README only describes the code and the circuit.
 ### Shooting
 
-When a button is pressed, the Arduino outputs two voltages to the L298N module in order to spin a motor. One of the input pins is set to *HIGH* while the other is set to *LOW*. For more information, see an [L298N schematic](https://www.handsontec.com/dataspecs/L298N%20Motor%20Driver.pdf).
+When a button is pressed, the Arduino outputs two voltages to the L298N module in order to spin a motor. One of the input pins is set to *HIGH* while the other is set to *LOW*. For more information, see an [L298N schematic](https://www.handsontec.com/dataspecs/L298N%20Motor%20Driver.pdf).\
 \
 The motor spins a gear in a rack and pinion system. The gear pushes the rack against a spring. The gear does not have teeth around its entire circumference, so the rack is eventually released and is propelled forward by a spring, hitting and shooting a projectile.
 
@@ -21,5 +21,7 @@ The button in a joystick is not used because a dedicated button is preferable to
 \
 Finally, at the end of the loop, a 10 ms delay is necessary. Without it, any input via the analog stick would cause immediately rotate the servos to their limits.
 
-#### Full Circuit Schematic
-![Circuit Schematic](Images/BB_Turret_Circuit_Schematic.png "Circuit Schematic")
+#### Full Circuit Schematic and Board
+![Circuit Schematic](Images/BB_Turret_Circuit_Schematic.png "Circuit Schematic")\
+\
+![Board](Images/BB_Turret_Board.png "PCB")
