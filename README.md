@@ -24,4 +24,5 @@ Finally, at the end of the loop, a 10 ms delay is necessary. Without it, any inp
 #### Full Circuit Schematic and Board
 ![Circuit Schematic](Images/BB_Turret_Circuit_Schematic.png "Circuit Schematic")\
 \
-![Board](Images/BB_Turret_Board.png "PCB")
+![Board](Images/BB_Turret_Board.png "PCB")\
+The PCB has a ground plane that connects all ground pins to each other.
