@@ -6601,7 +6601,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </sheet>
 </sheets>
 <errors>
-<approved hash="102,1,190.5,58.42,3.3V,GND,,,,"/>
+<approved hash="102,1,205.74,55.88,3.3V,GND,,,,"/>
 <approved hash="202,1,78.74,139.7,ARDUINO_NANO1,!RESET,,,,"/>
 <approved hash="202,1,119.38,114.3,ARDUINO_NANO1,AREF,,,,"/>
 <approved hash="202,1,119.38,139.7,ARDUINO_NANO1,!RESET,,,,"/>

@@ -3,7 +3,7 @@
 <eagle version="9.6.2">
 <drawing>
 <settings>
-<setting alwaysvectorfont="yes"/>
+<setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
@@ -248,6 +248,13 @@
 <wire x1="57.15" y1="45.72" x2="53.34" y2="45.72" width="0.2032" layer="21"/>
 <wire x1="53.34" y1="45.72" x2="53.34" y2="59.69" width="0.2032" layer="21"/>
 <text x="69.85" y="50.8" size="5.08" layer="25" rot="R90">L298N</text>
+<text x="73.66" y="77.47" size="1.016" layer="21" rot="R90">OUT1</text>
+<text x="59.69" y="77.47" size="1.016" layer="21" rot="R90">OUT2</text>
+<text x="73.66" y="41.91" size="1.016" layer="21" rot="R90">OUT4</text>
+<text x="59.69" y="41.91" size="1.016" layer="21" rot="R90">OUT3</text>
+<text x="59.69" y="71.12" size="1.016" layer="21">+12V</text>
+<text x="59.69" y="66.04" size="1.016" layer="21">GND</text>
+<text x="59.69" y="60.96" size="1.016" layer="21">+5V</text>
 </plain>
 <libraries>
 <library name="ArduinoNanoV30">

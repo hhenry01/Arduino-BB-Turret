@@ -1694,7 +1694,7 @@ design rules under a new name.</description>
 <param name="mdSmdSmd" value="8mil"/>
 <param name="mdViaViaSameLayer" value="8mil"/>
 <param name="mnLayersViaInSmd" value="2"/>
-<param name="mdCopperDimension" value="8mil"/>
+<param name="mdCopperDimension" value="10mil"/>
 <param name="mdDrill" value="8mil"/>
 <param name="mdSmdStop" value="0mil"/>
 <param name="msWidth" value="8mil"/>
@@ -1733,7 +1733,7 @@ design rules under a new name.</description>
 <param name="mlMaxStopFrame" value="4mil"/>
 <param name="mlMinCreamFrame" value="0mil"/>
 <param name="mlMaxCreamFrame" value="0mil"/>
-<param name="mlViaStopLimit" value="20mil"/>
+<param name="mlViaStopLimit" value="25mil"/>
 <param name="srRoundness" value="0"/>
 <param name="srMinRoundness" value="0mil"/>
 <param name="srMaxRoundness" value="0mil"/>
@@ -1883,11 +1883,6 @@ design rules under a new name.</description>
 </elements>
 <signals>
 <signal name="GND">
-<contactref element="1KOHM" pad="1"/>
-<contactref element="JOYSTICK" pad="1"/>
-<contactref element="M2" pad="3"/>
-<contactref element="M1" pad="3"/>
-<contactref element="ARDUINO_NANO1" pad="14"/>
 <polygon width="0.254" layer="1" isolate="0.4064">
 <vertex x="0" y="0"/>
 <vertex x="0" y="85.09"/>
@@ -1896,6 +1891,7 @@ design rules under a new name.</description>
 </polygon>
 <contactref element="ARDUINO_NANO1" pad="19"/>
 <contactref element="L298N_PIN_CONNECTION" pad="4"/>
+<wire x1="33.02" y1="38.1" x2="38.1" y2="66.04" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="VRX">
 <contactref element="JOYSTICK" pad="3"/>
@@ -1987,6 +1983,17 @@ design rules under a new name.</description>
 <contactref element="ARDUINO_NANO1" pad="24"/>
 <wire x1="38.1" y1="68.58" x2="20.32" y2="50.8" width="0.2032" layer="1"/>
 <wire x1="20.32" y1="50.8" x2="20.32" y2="38.1" width="0.2032" layer="1"/>
+</signal>
+<signal name="3.3V">
+<contactref element="1KOHM" pad="1"/>
+<contactref element="JOYSTICK" pad="1"/>
+<contactref element="M2" pad="3"/>
+<contactref element="ARDUINO_NANO1" pad="14"/>
+<contactref element="M1" pad="3"/>
+<wire x1="12.7" y1="76.2" x2="26.67" y2="76.2" width="0" layer="19" extent="1-1"/>
+<wire x1="38.1" y1="22.86" x2="26.67" y2="76.2" width="0" layer="19" extent="1-1"/>
+<wire x1="36.83" y1="15.24" x2="38.1" y2="22.86" width="0" layer="19" extent="1-1"/>
+<wire x1="59.69" y1="21.59" x2="38.1" y2="22.86" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>
 <mfgpreviewcolors>

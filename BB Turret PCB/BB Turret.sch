@@ -6494,30 +6494,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <label x="101.6" y="91.44" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="5V" class="0">
-<segment>
-<pinref part="JOYSTICK" gate="G$1" pin="+5V"/>
-<wire x1="162.56" y1="127" x2="182.88" y2="127" width="0.1524" layer="91"/>
-<wire x1="162.56" y1="127" x2="162.56" y2="111.76" width="0.1524" layer="91"/>
-<wire x1="162.56" y1="111.76" x2="162.56" y2="86.36" width="0.1524" layer="91"/>
-<wire x1="162.56" y1="86.36" x2="162.56" y2="78.74" width="0.1524" layer="91"/>
-<wire x1="162.56" y1="111.76" x2="243.84" y2="111.76" width="0.1524" layer="91"/>
-<pinref part="PUSH_BUTTON" gate="G$1" pin="2"/>
-<pinref part="M1" gate="G$1" pin="V+"/>
-<wire x1="167.64" y1="78.74" x2="162.56" y2="78.74" width="0.1524" layer="91"/>
-<pinref part="M2" gate="G$1" pin="V+"/>
-<wire x1="210.82" y1="78.74" x2="195.58" y2="78.74" width="0.1524" layer="91"/>
-<wire x1="195.58" y1="78.74" x2="195.58" y2="86.36" width="0.1524" layer="91"/>
-<wire x1="195.58" y1="86.36" x2="162.56" y2="86.36" width="0.1524" layer="91"/>
-<junction x="162.56" y="86.36"/>
-<label x="162.56" y="137.16" size="1.778" layer="95"/>
-<pinref part="ARDUINO_NANO1" gate="G$1" pin="5V"/>
-<wire x1="119.38" y1="137.16" x2="162.56" y2="137.16" width="0.1524" layer="91"/>
-<wire x1="162.56" y1="137.16" x2="162.56" y2="127" width="0.1524" layer="91"/>
-<junction x="162.56" y="127"/>
-<junction x="162.56" y="111.76"/>
-</segment>
-</net>
 <net name="GND" class="0">
 <segment>
 <pinref part="ARDUINO_NANO1" gate="G$1" pin="GND@1"/>
@@ -6578,16 +6554,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="45.72" y1="111.76" x2="78.74" y2="111.76" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="5V_IN" class="0">
-<segment>
-<pinref part="ARDUINO_NANO1" gate="G$1" pin="VIN"/>
-<pinref part="L298N_PIN_CONNECTION" gate="A" pin="5"/>
-<wire x1="45.72" y1="119.38" x2="63.5" y2="119.38" width="0.1524" layer="91"/>
-<wire x1="63.5" y1="119.38" x2="63.5" y2="152.4" width="0.1524" layer="91"/>
-<wire x1="63.5" y1="152.4" x2="119.38" y2="152.4" width="0.1524" layer="91"/>
-<wire x1="119.38" y1="152.4" x2="119.38" y2="144.78" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="ENA" class="0">
 <segment>
 <pinref part="L298N_PIN_CONNECTION" gate="A" pin="3"/>
@@ -6595,6 +6561,37 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="73.66" y1="114.3" x2="73.66" y2="124.46" width="0.1524" layer="91"/>
 <pinref part="ARDUINO_NANO1" gate="G$1" pin="D6"/>
 <wire x1="73.66" y1="124.46" x2="78.74" y2="124.46" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="5V" class="0">
+<segment>
+<pinref part="L298N_PIN_CONNECTION" gate="A" pin="5"/>
+<wire x1="45.72" y1="119.38" x2="63.5" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="63.5" y1="119.38" x2="63.5" y2="152.4" width="0.1524" layer="91"/>
+<wire x1="63.5" y1="152.4" x2="121.92" y2="152.4" width="0.1524" layer="91"/>
+<pinref part="JOYSTICK" gate="G$1" pin="+5V"/>
+<wire x1="162.56" y1="127" x2="182.88" y2="127" width="0.1524" layer="91"/>
+<wire x1="162.56" y1="127" x2="162.56" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="162.56" y1="111.76" x2="162.56" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="162.56" y1="86.36" x2="162.56" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="162.56" y1="111.76" x2="243.84" y2="111.76" width="0.1524" layer="91"/>
+<pinref part="PUSH_BUTTON" gate="G$1" pin="2"/>
+<pinref part="M1" gate="G$1" pin="V+"/>
+<wire x1="167.64" y1="78.74" x2="162.56" y2="78.74" width="0.1524" layer="91"/>
+<pinref part="M2" gate="G$1" pin="V+"/>
+<wire x1="210.82" y1="78.74" x2="195.58" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="195.58" y1="78.74" x2="195.58" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="195.58" y1="86.36" x2="162.56" y2="86.36" width="0.1524" layer="91"/>
+<junction x="162.56" y="86.36"/>
+<label x="162.56" y="137.16" size="1.778" layer="95"/>
+<pinref part="ARDUINO_NANO1" gate="G$1" pin="5V"/>
+<wire x1="119.38" y1="137.16" x2="121.92" y2="137.16" width="0.1524" layer="91"/>
+<wire x1="121.92" y1="137.16" x2="162.56" y2="137.16" width="0.1524" layer="91"/>
+<wire x1="162.56" y1="137.16" x2="162.56" y2="127" width="0.1524" layer="91"/>
+<junction x="162.56" y="127"/>
+<junction x="162.56" y="111.76"/>
+<wire x1="121.92" y1="152.4" x2="121.92" y2="137.16" width="0.1524" layer="91"/>
+<junction x="121.92" y="137.16"/>
 </segment>
 </net>
 </nets>
@@ -6605,7 +6602,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <approved hash="202,1,78.74,139.7,ARDUINO_NANO1,!RESET,,,,"/>
 <approved hash="202,1,119.38,114.3,ARDUINO_NANO1,AREF,,,,"/>
 <approved hash="202,1,119.38,139.7,ARDUINO_NANO1,!RESET,,,,"/>
-<approved hash="104,1,119.38,144.78,ARDUINO_NANO1,VIN,5V_IN,,,"/>
+<approved hash="204,1,119.38,144.78,ARDUINO_NANO1,VIN,,,,"/>
 <approved hash="104,1,182.88,127,JOYSTICK,+5V,5V,,,"/>
 <approved hash="105,1,205.74,160.02,12V,,,,,"/>
 <approved hash="105,1,198.12,182.88,OUT_A1,,,,,"/>
